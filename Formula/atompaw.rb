@@ -4,11 +4,11 @@ class Atompaw < Formula
   url "http://users.wfu.edu/natalie/papers/pwpaw/atompaw-4.1.0.6.tar.gz"
   sha256 "42a46c0569367c0b971fbc3dcaf5eaec7020bdff111022b6f320de9f11c41c2c"
 
-  #bottle do
-  #  root_url "http://forge.abinit.org/homebrew"
-  #  cellar :any
-  #  sha256 "xxx" => :mojave
-  #end
+  bottle do
+    root_url "http://forge.abinit.org/homebrew"
+    cellar :any
+    sha256 "d51eb6968bc1d5070102c4473bdb750ce1088dd324f0d960481ce45d7a5ca002" => :mojave
+  end
 
   depends_on "gcc" if OS.mac? # for gfortran
   depends_on "libxc" => :recommended
