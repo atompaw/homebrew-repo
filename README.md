@@ -4,9 +4,15 @@ This is a [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for the 
 
 ## Installing
 
-Install Homebrew and run
+Install Homebrew and run:
 
 ```
 brew tap atompaw/repo
 brew install atompaw
+```
+
+or directly:
+
+```
+brew install atompaw/repo/atompaw
 ```
