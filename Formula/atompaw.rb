@@ -1,5 +1,5 @@
 class Atompaw < Formula
-  desc "AtomPAW generates atomic datasets needed for performing electronic structure calculations based on the projector augmented-wave (PAW) method."
+  desc "Atomic datasets generator for DFT calculations based on the PAW method"
   homepage "http://users.wfu.edu/natalie/papers/pwpaw"
   url "http://users.wfu.edu/natalie/papers/pwpaw/atompaw-4.1.0.6.tar.gz"
   sha256 "42a46c0569367c0b971fbc3dcaf5eaec7020bdff111022b6f320de9f11c41c2c"
@@ -7,28 +7,33 @@ class Atompaw < Formula
   bottle do
     root_url "http://forge.abinit.org/homebrew"
     cellar :any
-    sha256 "2df80d08e1a1c4863c4c9fb27620be4081016dc01974716e0d16a26a3ac49695" => :catalina
-    sha256 "d51eb6968bc1d5070102c4473bdb750ce1088dd324f0d960481ce45d7a5ca002" => :mojave
-    sha256 "a156808e54dbf1e3ff870df29f6216a312883375f45c357f23f9f3133f528cb3" => :high_sierra
+    sha256 "5d582c2d83030625490ee0dd27fac50b7bc23314c3bf9838140624e1f79ed84e" => :catalina
+    sha256 "c8a2356f5b2cd2f31f75253e48b9cb480bb84ef427216a03e9f45168b59434dc" => :mojave
+    sha256 "83cb08331fc315fed818ced34b81fe68ebd61d712e0bf2813873ca67c4f54815" => :high_sierra
   end
 
   depends_on "gcc" if OS.mac? # for gfortran
-  depends_on "libxc" => :recommended
   if OS.mac?
     depends_on "veclibfort"
+  else
+    depends_on "lapack"
   end
+  depends_on "libxc" => :recommended
 
   def install
-    #ENV.deparallelize
     args = %W[--prefix=#{prefix}
               --disable-shared]
-    args << "--with-linalg-incs=-I#{Formula["veclibfort"].opt_include}"
-    args << "--with-linalg-libs=-L#{Formula["veclibfort"].opt_lib} -lvecLibFort"
-
+    if OS.mac?
+      args << "--with-linalg-incs=-I#{Formula["veclibfort"].opt_include}"
+      args << "--with-linalg-libs=-L#{Formula["veclibfort"].opt_lib} -lvecLibFort"
+    else
+      args << "--with-linalg-incs=-I#{Formula["lapack"].opt_include}"
+      args << "--with-linalg-libs=-L#{Formula["lapack"].opt_lib} -lblas -llapack"
+    end
     if build.with? "libxc"
       args << "--enable-libxc"
       args << "--with-libxc-incs=-I#{Formula["libxc"].opt_include}"
-      args << "--with-libxc-libs=-L#{Formula["libxc"].opt_lib} -lxc -lxcf90"
+      args << "--with-libxc-libs=-L#{Formula["libxc"].opt_lib} -lxc"
     end
 
     system "./configure", *args
@@ -43,5 +48,4 @@ class Atompaw < Formula
       system "#{bin}/atompaw < #{atompaw_input} > atompaw.log"
     end
   end
-
 end
