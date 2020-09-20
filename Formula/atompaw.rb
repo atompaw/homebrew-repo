@@ -23,12 +23,10 @@ class Atompaw < Formula
   def install
     args = %W[--prefix=#{prefix}
               --disable-shared]
-    if OS.mac?
-      args << "--with-linalg-incs=-I#{Formula["veclibfort"].opt_include}"
-      args << "--with-linalg-libs=-L#{Formula["veclibfort"].opt_lib} -lvecLibFort"
+    args << if OS.mac?
+      "--with-linalg-libs=-L#{Formula["veclibfort"].opt_lib} -lvecLibFort"
     else
-      args << "--with-linalg-incs=-I#{Formula["lapack"].opt_include}"
-      args << "--with-linalg-libs=-L#{Formula["lapack"].opt_lib} -lblas -llapack"
+      "--with-linalg-libs=-L#{Formula["lapack"].opt_lib} -lblas -llapack"
     end
     if build.with? "libxc"
       args << "--enable-libxc"
