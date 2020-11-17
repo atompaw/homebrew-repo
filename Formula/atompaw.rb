@@ -7,6 +7,7 @@ class Atompaw < Formula
   bottle do
     root_url "http://forge.abinit.org/homebrew"
     cellar :any
+    sha256 "9d7f95075df1d867e7d5e577ef51d3101988bee6baedb3872a84dbb2c8c90881" => :big_sur
     sha256 "5d582c2d83030625490ee0dd27fac50b7bc23314c3bf9838140624e1f79ed84e" => :catalina
     sha256 "c8a2356f5b2cd2f31f75253e48b9cb480bb84ef427216a03e9f45168b59434dc" => :mojave
     sha256 "83cb08331fc315fed818ced34b81fe68ebd61d712e0bf2813873ca67c4f54815" => :high_sierra
