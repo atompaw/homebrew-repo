@@ -1,16 +1,16 @@
 class Atompaw < Formula
   desc "Atomic datasets generator for DFT calculations based on the PAW method"
   homepage "http://users.wfu.edu/natalie/papers/pwpaw"
-  url "http://users.wfu.edu/natalie/papers/pwpaw/atompaw-4.1.0.6.tar.gz"
-  sha256 "42a46c0569367c0b971fbc3dcaf5eaec7020bdff111022b6f320de9f11c41c2c"
+  url "http://users.wfu.edu/natalie/papers/pwpaw/atompaw-4.1.1.0.tar.gz"
+  sha256 "b1ee2b53720066655d98523ef337e54850cb1e68b3a2da04ff5a1576d3893891"
 
   bottle do
     root_url "http://forge.abinit.org/homebrew"
     cellar :any
-    sha256 "9d7f95075df1d867e7d5e577ef51d3101988bee6baedb3872a84dbb2c8c90881" => :big_sur
-    sha256 "5d582c2d83030625490ee0dd27fac50b7bc23314c3bf9838140624e1f79ed84e" => :catalina
-    sha256 "c8a2356f5b2cd2f31f75253e48b9cb480bb84ef427216a03e9f45168b59434dc" => :mojave
-    sha256 "83cb08331fc315fed818ced34b81fe68ebd61d712e0bf2813873ca67c4f54815" => :high_sierra
+    sha256 "ad462a8365445cad334ee8a74d6d0694683d5d44b7ca9bcf8a1a7ef19217d728" => :big_sur
+    sha256 "b16f9b5b0011a6acf7eae4a3712516f4ed2dfdfc16a788108693a626967c5b89" => :catalina
+    sha256 "bdfb1a99063b939e58abb0ed9ed880fcd951a4a6c6e1a8d8c32051f18999b08d" => :mojave
+    sha256 "d721e7e69948d949a26db5dc5a4cfaa09f609633c27be90df6e9d7bf60d4e89f" => :high_sierra
   end
 
   depends_on "gcc" if OS.mac? # for gfortran
