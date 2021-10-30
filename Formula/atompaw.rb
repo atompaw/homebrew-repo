@@ -1,7 +1,7 @@
 class Atompaw < Formula
   desc "Atomic datasets generator for DFT calculations based on the PAW method"
-  homepage "http://users.wfu.edu/natalie/papers/pwpaw"
-  url "http://users.wfu.edu/natalie/papers/pwpaw/atompaw-4.1.1.0.tar.gz"
+  homepage "https://users.wfu.edu/natalie/papers/pwpaw"
+  url "https://users.wfu.edu/natalie/papers/pwpaw/atompaw-4.1.1.0.tar.gz"
   sha256 "b1ee2b53720066655d98523ef337e54850cb1e68b3a2da04ff5a1576d3893891"
 
   bottle do
