@@ -1,18 +1,18 @@
 class Atompaw < Formula
-  desc "Atomic datasets generator for DFT calculations based on the PAW method"
+  desc "Atomic dataset generator for DFT calculations based on the PAW method"
   homepage "https://users.wfu.edu/natalie/papers/pwpaw"
-  url "https://users.wfu.edu/natalie/papers/pwpaw/atompaw-4.1.1.0.tar.gz"
-  sha256 "b1ee2b53720066655d98523ef337e54850cb1e68b3a2da04ff5a1576d3893891"
+  url "http://users.wfu.edu/natalie/papers/pwpaw/atompaw-4.2.0.0.tar.gz"
+  sha256 "dde5bc216544180a44e0bbd77668feb741621fd3fb0a14bd98df721363710c62"
 
   bottle do
     root_url "http://forge.abinit.org/homebrew"
-    sha256 cellar: :any,                 arm64_big_sur: "69de3c32558d697058bbc9796a14b07a0eb23d1033555f51b0b49a7feef893c1"
-    sha256 cellar: :any,                 monterey:      "29625182b88fca8f5c537edbe2e09e43c64bc5f47d9c46d2be840a18937860ce"
-    sha256 cellar: :any,                 big_sur:       "83043c4fbbb55415f18c76b7019a9b6c05f5538b2f0e305d89fdab78a9d53ac1"
-    sha256 cellar: :any,                 catalina:      "b0875f2681de8c25403e22ddba9f341e1d6dc7e2399052d756b5727cf7a979fa"
-    sha256 cellar: :any,                 mojave:        "7c7b1d2bb768face4727eacdd595702a68f1ce6b07426e16f44df97817d75878"
-    sha256 cellar: :any,                 high_sierra:   "6f5cb71acc71451999fcb0b26e63251f9e2558dd8d6985d740ef6b2058c6c33c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "71a754672a3f407d6d06242d354d7a08630de57a885dd64f7434ef728abcb148"
+    #sha256 cellar: :any,                 arm64_big_sur: "69de3c32558d697058bbc9796a14b07a0eb23d1033555f51b0b49a7feef893c1"
+    sha256 cellar: :any,                 monterey:      "3c9abf66159762a0145477ee2d6ea8854ad955de1db15753b27d587ec7bc9b27"
+    sha256 cellar: :any,                 big_sur:       "9c6908c96ab57e372840fceb42abc5714c0dbe5742822cc3d6d10fbeb21dd6c6"
+    sha256 cellar: :any,                 catalina:      "c7ab9b82174578646918e4b88dcd7185ca4a1c4aca8c455de370b0e2399b07a2"
+    sha256 cellar: :any,                 mojave:        "a8915bb2088705730fe7ef8ae87294c7c59f24e2dd0afc3228204de900cf5145"
+    sha256 cellar: :any,                 high_sierra:   "a29dd8d1f8d9b8348ceb0a68b23e491e3cb1a201bbefde2bd2eacdcfab43ac18"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "460d95df91ab449fc8014c1f2ebac3a7f4fdb00ab12475cf2127ef977022821f"
   end
 
   depends_on "gcc" if OS.mac? # for gfortran
