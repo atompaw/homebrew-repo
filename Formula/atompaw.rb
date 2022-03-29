@@ -6,13 +6,14 @@ class Atompaw < Formula
 
   bottle do
     root_url "http://forge.abinit.org/homebrew"
-    #sha256 cellar: :any,                 arm64_big_sur: "69de3c32558d697058bbc9796a14b07a0eb23d1033555f51b0b49a7feef893c1"
-    sha256 cellar: :any,                 monterey:      "3c9abf66159762a0145477ee2d6ea8854ad955de1db15753b27d587ec7bc9b27"
-    sha256 cellar: :any,                 big_sur:       "9c6908c96ab57e372840fceb42abc5714c0dbe5742822cc3d6d10fbeb21dd6c6"
-    sha256 cellar: :any,                 catalina:      "c7ab9b82174578646918e4b88dcd7185ca4a1c4aca8c455de370b0e2399b07a2"
-    sha256 cellar: :any,                 mojave:        "a8915bb2088705730fe7ef8ae87294c7c59f24e2dd0afc3228204de900cf5145"
-    sha256 cellar: :any,                 high_sierra:   "a29dd8d1f8d9b8348ceb0a68b23e491e3cb1a201bbefde2bd2eacdcfab43ac18"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "460d95df91ab449fc8014c1f2ebac3a7f4fdb00ab12475cf2127ef977022821f"
+    sha256 cellar: :any,                 arm64_monterey: "5165a20f0811e5fc42e8a0f0bffda2eb07914f4b5c4b95115e5bed9783ebf061"
+    # sha256 cellar: :any, arm64_big_sur:  "5165a20f0811e5fc42e8a0f0bffda2eb07914f4b5c4b95115e5bed9783ebf061"
+    sha256 cellar: :any,                 monterey:       "3c9abf66159762a0145477ee2d6ea8854ad955de1db15753b27d587ec7bc9b27"
+    sha256 cellar: :any,                 big_sur:        "9c6908c96ab57e372840fceb42abc5714c0dbe5742822cc3d6d10fbeb21dd6c6"
+    sha256 cellar: :any,                 catalina:       "c7ab9b82174578646918e4b88dcd7185ca4a1c4aca8c455de370b0e2399b07a2"
+    sha256 cellar: :any,                 mojave:         "a8915bb2088705730fe7ef8ae87294c7c59f24e2dd0afc3228204de900cf5145"
+    sha256 cellar: :any,                 high_sierra:    "a29dd8d1f8d9b8348ceb0a68b23e491e3cb1a201bbefde2bd2eacdcfab43ac18"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "460d95df91ab449fc8014c1f2ebac3a7f4fdb00ab12475cf2127ef977022821f"
   end
 
   depends_on "gcc" if OS.mac? # for gfortran
