@@ -21,5 +21,5 @@ brew install atompaw/repo/atompaw
 *Notes:*
 
 - *Always use the latest Homebrew version (use* `brew upgrade`*).*
-- *Bottles for `Mac Silicon` (arm64) are not always provided. If so, atompaw will be built on the fly during installation process. The build only takes 1'30 on a Macbook M1 (2022).*
+- *Bottles (compiled versions) are not always provided. If so, atompaw will be built on the fly during installation process. The build only takes 1'30 on a Macbook M1/M2.*
 - *Bottles for linux systems are under test.*
