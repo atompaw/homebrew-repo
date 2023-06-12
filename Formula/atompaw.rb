@@ -1,19 +1,19 @@
 class Atompaw < Formula
   desc "Atomic dataset generator for DFT calculations based on the PAW method"
   homepage "https://users.wfu.edu/natalie/papers/pwpaw"
-  url "http://users.wfu.edu/natalie/papers/pwpaw/atompaw-4.2.0.2.tar.gz"
-  sha256 "c16648611f5798b8e1781fb2229854c54fa63f085bd11440fdc4ecacbf0ad93e"
+  url "http://users.wfu.edu/natalie/papers/pwpaw/atompaw-4.2.0.3.tar.gz"
+  sha256 "9fd4f9b60e793eee10aead4296e89f0bd6e8612b729a15e2401bbd90e4e9dd2d"
 
   bottle do
     root_url "http://forge.abinit.org/homebrew"
-    sha256 cellar: :any, arm64_ventura: "dd163b4c81ef91059e3ff4d49ed7541fd932656f8ee9c7d85c669aa5e827067a"
-    sha256 cellar: :any, arm64_monterey: "55b56211f19afdd2ee71a3fb2fe11e74aca0035d8d22b1726ff7bb171d539919"
-    sha256 cellar: :any, ventura: "1f49678812a8bcca0bfb58b725588945c07ca17ce0b6d4104d75c33ffaa32450"
-    sha256 cellar: :any, monterey: "8faad12a405dfe7209b102b6d1e37e68bff8732fc473190e938ffe0e7a5d4629"
-    sha256 cellar: :any, big_sur:  "c1a99a6139c67de4209ed9ec928fcf214fd3a7d9acd22c9373f3ddaf69ed8428"
-    sha256 cellar: :any, catalina: "1b92fe1aef0849d371d0b78d225d4cb219a8179ce9334a542df760992558f394"
-    sha256 cellar: :any, mojave: "7f0e006781c6681dddcb1bf66f6580bdd09e72cb3ac328145bf4e19ebcfeae46"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "1924baca26fa31b6b8074e5f2834552f76ce83a921d8fa2ec55fd2faafd616fd"
+    sha256 cellar: :any, arm64_ventura: "42586841f7d3e3914d4c1096007a4d366e9f632806b65678a2208f63abc8caba"
+    sha256 cellar: :any, arm64_monterey: "0585916c5443fc4e029ddaf58269e67c1282c9ea5e7651e2fc2c3fd253819010"
+    sha256 cellar: :any, ventura: "d22b1e6254bf1fab1ffa3f75876692e2f3f21a4ced7649d90631519e2cf31fac"
+    sha256 cellar: :any, monterey: "795fe4077c2876cc152b9baab96d8592b28f4d98be048cf922ce3f6ed72b978d"
+    sha256 cellar: :any, big_sur:  "13fb11ab2e7d079a049366eb5f6c36f7a581fc6b2df4184d4209eef4b00d33e2"
+    sha256 cellar: :any, catalina: "0681e2d3a24afa6c38a6914738c989662af229bb7415d75e16d6d3e965dfad28"
+    sha256 cellar: :any, mojave: "6bc9d6ff2aea395e1b8f2d8604b8db6452bd0f20dad1c48bb1aa37ef0022c2fe"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "cc6bc7c86d2f3f25d03903d086388ce1b265ca8b8f6aed322a7d9f2e9f088b44"
   end
 
   depends_on "gcc" if OS.mac? # for gfortran
