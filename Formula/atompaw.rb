@@ -6,15 +6,17 @@ class Atompaw < Formula
 
   bottle do
     root_url "http://forge.abinit.org/homebrew"
-    sha256 cellar: :any, arm64_sonoma: "d486ddfaf087919ed375eecc9cceaf15dd5b0c62b772dfcf446d45209d7a9cde"
-    sha256 cellar: :any, arm64_monterey: "06da2abd0142f301e08496871b5b4ba4ba5ac56dde6f3114bc8c02622f460939"
-    sha256 cellar: :any, arm64_ventura: "0f3f2334a2760214311b3dae6226ac6818317b7b1d6cf81a49275057fcabebac"
-    sha256 cellar: :any, sonoma: "9494ba0abdcfa19b6a6c53315ece45b0ed79d1b047b6a0157e5207527fa59ffc"
-    sha256 cellar: :any, monterey: "ccc60942b922eabb9f8e5bb8f4e42aaac3da03fe0f393542df40dca245701f21"
-    sha256 cellar: :any, ventura: "4602c2f56a5c5769dd49038710b7878005656ea43ce2db370d9cc22c088595b9"
-    sha256 cellar: :any, big_sur: "97a76c199308c3b62033396b6d3834993afb9d104c7de31b9787c1053ecc066e"
-    sha256 cellar: :any, catalina: "b0bb60502179da5dd32ad3ac728f5216058659cb6a04894f774186fff98921c4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "8f5a8699b71295ffe276c200c9bf2bb56ef338f8eb28d11926eb43eeb3a11fcd"
+    sha256 cellar: :any, arm64_tahoe: "c54851fcdf50c0f710fab79cd54995f704af480da1d8b20b51ed7d0bdb73e715"
+    sha256 cellar: :any, arm64_sequoia: "760881c5da140eac3b4fb7f7c8956023f6d76428d97c828551e09f54543f0642"
+    sha256 cellar: :any, arm64_sonoma: "def8cf9c6bc06680a97ba79317597ea9a74438d94cb37ef55840929e7d8fda51"
+    sha256 cellar: :any, arm64_ventura: "b7629823cfaec65bb34f7d9bff519c14f78b69743907c3186765f62a7325083f"
+    sha256 cellar: :any, arm64_monterey: "a937aa3c791ff1c709725363cb14b5fb5a81fa9f89f30299db97c73d1dfe57bf"
+    sha256 cellar: :any, tahoe: "0f1588e0daa10d66ef4b08103b189e0328e44099a6d764f8e5bea5ee4501db97"
+    sha256 cellar: :any, sequoia: "2a9dbdd526530a9bde006c3f89e7225177afa17d62cf3b9b4a9f27f6d7c1a8b9"
+    sha256 cellar: :any, sonoma: "f44e23f06dada9563a2cdab280719aa00c7b0d888127daf5f1d88c604af675d1"
+    sha256 cellar: :any, ventura: "6c44e339cd40c664c2c5e95020e8dd56803201d38cba8b6cc1a00ff14a9ef9dd"
+    sha256 cellar: :any, monterey: "cb1f6307c80ec293ce3db0646b0948f3fa7ab787990ea6a853ee24a3f440acec"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "bb0b8859c41420d974b523ce619fd16d05a772e90b06f37d5a2347ea7a2e2671"
   end
 
   depends_on "gcc" if OS.mac? # for gfortran
