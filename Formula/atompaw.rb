@@ -1,22 +1,22 @@
 class Atompaw < Formula
   desc "Atomic dataset generator for DFT calculations based on the PAW method"
   homepage "https://users.wfu.edu/natalie/papers/pwpaw"
-  url "http://users.wfu.edu/natalie/papers/pwpaw/atompaw-4.2.0.3.tar.gz"
-  sha256 "9fd4f9b60e793eee10aead4296e89f0bd6e8612b729a15e2401bbd90e4e9dd2d"
+  url "http://users.wfu.edu/natalie/papers/pwpaw/atompaw-4.2.0.4.tar.gz"
+  sha256 "09a7976f79b8a27b9a9618ddffb7efa132cdc46cbae428c053c1089817c35c73"
 
   bottle do
     root_url "http://forge.abinit.org/homebrew"
-    sha256 cellar: :any, arm64_tahoe: "c54851fcdf50c0f710fab79cd54995f704af480da1d8b20b51ed7d0bdb73e715"
-    sha256 cellar: :any, arm64_sequoia: "760881c5da140eac3b4fb7f7c8956023f6d76428d97c828551e09f54543f0642"
-    sha256 cellar: :any, arm64_sonoma: "def8cf9c6bc06680a97ba79317597ea9a74438d94cb37ef55840929e7d8fda51"
-    sha256 cellar: :any, arm64_ventura: "b7629823cfaec65bb34f7d9bff519c14f78b69743907c3186765f62a7325083f"
-    sha256 cellar: :any, arm64_monterey: "a937aa3c791ff1c709725363cb14b5fb5a81fa9f89f30299db97c73d1dfe57bf"
-    sha256 cellar: :any, tahoe: "0f1588e0daa10d66ef4b08103b189e0328e44099a6d764f8e5bea5ee4501db97"
-    sha256 cellar: :any, sequoia: "2a9dbdd526530a9bde006c3f89e7225177afa17d62cf3b9b4a9f27f6d7c1a8b9"
-    sha256 cellar: :any, sonoma: "f44e23f06dada9563a2cdab280719aa00c7b0d888127daf5f1d88c604af675d1"
-    sha256 cellar: :any, ventura: "6c44e339cd40c664c2c5e95020e8dd56803201d38cba8b6cc1a00ff14a9ef9dd"
-    sha256 cellar: :any, monterey: "cb1f6307c80ec293ce3db0646b0948f3fa7ab787990ea6a853ee24a3f440acec"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "bb0b8859c41420d974b523ce619fd16d05a772e90b06f37d5a2347ea7a2e2671"
+    sha256 cellar: :any, arm64_tahoe: "ee3a7133c7c83c5d5f91d91469adc6155097a1b24f7b64a8e8acfec3be365d1a"
+    sha256 cellar: :any, arm64_sequoia: "fc245fbb230f499cf8db8e30781e3ada747bdd38e5ee812d4ac82f9edebf66a0"
+    sha256 cellar: :any, arm64_sonoma: "782ae3f1d2b865f45eca5aee9dbdd95cb09376908447e0bfc09c00595baf05d7"
+    sha256 cellar: :any, arm64_ventura: "9fca664bddcc722baf239f5ef7844baadb95f522b3c293732e84130d697b9bc6"
+    sha256 cellar: :any, arm64_monterey: "bcced76de307fbb5b97b51656854e86d22eeb0769b2fe09b5e2a05bdba67c717"
+    sha256 cellar: :any, tahoe: "732276d71a62124261b4cf1782400bbbda1ab7b515b9e1cdb8466b6d9a440bba"
+    sha256 cellar: :any, sequoia: "f0f681a41b26965a864d5b86e7828e365b1e39c17055c09fd633b7bcd1bb7a93"
+    sha256 cellar: :any, sonoma: "732922efcd5ee77ddf9d8d4efcb1d493fe4053a155685140935b2b67ddab105c"
+    sha256 cellar: :any, ventura: "81bde15c36c31ccb43acce87f288b8fde51c611f781f4c851c2adc149cd71715"
+    sha256 cellar: :any, monterey: "76f9a9050c4eb83063d971eaa0908566e2cfdee7b4f6402f2e9280f9c9c8b4ff"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "1fbc6121de3c71b75765b12c3b846fdccffe9d1a64e00ce6d6fa4fe0879734b9"
   end
 
   depends_on "gcc" if OS.mac? # for gfortran
